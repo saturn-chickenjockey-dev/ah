@@ -5,4 +5,4 @@ Staff list: list of staff
 
 Trust list: trusted people
 
-Abuser list: retarded people
+Abuser list: ~~retarded~~ nice people 😊
